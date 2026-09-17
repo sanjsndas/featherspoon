@@ -1,0 +1,700 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About · Feather Spoon Pantry — Slow cooking, honest ingredients</title>
+    <meta name="description" content="Learn about Maren Ellison, the cook, writer, and recipe developer behind Feather Spoon Pantry. A story of slow cooking, honest ingredients, and everyday kitchen wisdom.">
+    <link rel="canonical" href="https://featherspoonpantry.com/about.html">
+    <!-- Open Graph -->
+    <meta property="og:title" content="About Feather Spoon Pantry — The story behind the pantry">
+    <meta property="og:description" content="Maren Ellison shares her journey from line cook to independent recipe developer, and why she believes in slow cooking and honest ingredients.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://featherspoonpantry.com/about.html">
+    <meta property="og:image" content="https://featherspoonpantry.com/images/feather-spoon-kitchen.jpg">
+    <!-- Schema.org -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "AboutPage",
+      "name": "About Feather Spoon Pantry",
+      "url": "https://featherspoonpantry.com/about.html",
+      "description": "The story of Maren Ellison and Feather Spoon Pantry — a slow cooking, independent food blog.",
+      "author": {
+        "@type": "Person",
+        "name": "Maren Ellison"
+      }
+    }
+    </script>
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300..600&family=Source+Serif+4:opsz,wght@8..60,400..700&display=swap" rel="stylesheet">
+    <style>
+        /* --- RESET & BASE (same as index) --- */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        html {
+            font-size: 100%;
+            scroll-behavior: smooth;
+        }
+        body {
+            font-family: 'Inter', system-ui, -apple-system, sans-serif;
+            background-color: #fbf8f4;
+            color: #2d2a24;
+            line-height: 1.6;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+        img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+        }
+        a {
+            color: #5f4b3a;
+            text-decoration: none;
+            transition: color 0.15s ease;
+        }
+        a:hover {
+            color: #b35e3a;
+        }
+        h1, h2, h3, h4 {
+            font-family: 'Source Serif 4', Georgia, serif;
+            font-weight: 600;
+            line-height: 1.25;
+            color: #1e1b17;
+            letter-spacing: -0.01em;
+        }
+        h1 {
+            font-size: 2.4rem;
+            font-weight: 700;
+            margin-bottom: 0.5rem;
+        }
+        h2 {
+            font-size: 1.75rem;
+            margin-bottom: 1rem;
+        }
+        h3 {
+            font-size: 1.3rem;
+            margin-bottom: 0.6rem;
+        }
+        p {
+            margin-bottom: 1.2rem;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 1.5rem;
+        }
+
+        /* --- HEADER --- */
+        .site-header {
+            background-color: #fbf8f4;
+            border-bottom: 1px solid #e4ddd3;
+            padding: 1.2rem 0;
+        }
+        .header-inner {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 1rem;
+        }
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+        .logo-icon {
+            width: 32px;
+            height: 32px;
+            background: #5f4b3a;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #fbf8f4;
+            font-size: 1.2rem;
+            font-weight: 600;
+            font-family: 'Source Serif 4', serif;
+        }
+        .logo-text {
+            font-family: 'Source Serif 4', serif;
+            font-weight: 700;
+            font-size: 1.5rem;
+            color: #1e1b17;
+            letter-spacing: -0.02em;
+        }
+        .logo-text span {
+            color: #b35e3a;
+            font-weight: 400;
+        }
+        .nav-links {
+            display: flex;
+            gap: 1.8rem;
+            list-style: none;
+            font-size: 0.95rem;
+            font-weight: 500;
+            color: #5a4e42;
+            flex-wrap: wrap;
+        }
+        .nav-links a {
+            color: #4f453b;
+            padding-bottom: 2px;
+            border-bottom: 2px solid transparent;
+        }
+        .nav-links a:hover {
+            border-bottom-color: #b35e3a;
+            color: #1e1b17;
+        }
+        .nav-links a.active {
+            border-bottom-color: #b35e3a;
+            color: #1e1b17;
+            font-weight: 600;
+        }
+        .search-bar {
+            display: flex;
+            align-items: center;
+            background: #fff;
+            border: 1px solid #e4ddd3;
+            border-radius: 40px;
+            padding: 0.3rem 0.3rem 0.3rem 1rem;
+            max-width: 220px;
+            transition: border-color 0.2s;
+        }
+        .search-bar:focus-within {
+            border-color: #b35e3a;
+        }
+        .search-bar input {
+            border: none;
+            background: transparent;
+            padding: 0.4rem 0;
+            font-size: 0.9rem;
+            font-family: 'Inter', sans-serif;
+            color: #2d2a24;
+            outline: none;
+            width: 100%;
+        }
+        .search-bar input::placeholder {
+            color: #9b8e80;
+        }
+        .search-bar button {
+            background: none;
+            border: none;
+            cursor: pointer;
+            padding: 0.3rem 0.6rem;
+            color: #7a6b5d;
+            font-size: 1rem;
+            transition: color 0.15s;
+        }
+        .search-bar button:hover {
+            color: #b35e3a;
+        }
+
+        /* --- ABOUT PAGE SPECIFIC --- */
+        .about-hero {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 3rem;
+            align-items: center;
+            margin: 3rem 0 2.5rem;
+        }
+        .about-hero-image {
+            width: 100%;
+            height: 380px;
+            object-fit: cover;
+            border-radius: 12px;
+            background: #e4ddd3;
+            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.04);
+        }
+        .about-hero-content h1 {
+            font-size: 2.6rem;
+            margin-bottom: 1rem;
+            line-height: 1.2;
+        }
+        .about-hero-content .lead {
+            font-size: 1.15rem;
+            color: #4a423a;
+            line-height: 1.7;
+            margin-bottom: 1.5rem;
+        }
+        .about-hero-content .signature {
+            font-family: 'Source Serif 4', serif;
+            font-size: 1.2rem;
+            font-style: italic;
+            color: #b35e3a;
+            margin-top: 0.5rem;
+        }
+
+        .about-story {
+            background: #fff;
+            border: 1px solid #ede7df;
+            border-radius: 12px;
+            padding: 2.5rem 3rem;
+            margin: 2.5rem 0;
+        }
+        .about-story h2 {
+            font-size: 1.8rem;
+            margin-bottom: 1.2rem;
+        }
+        .about-story p {
+            font-size: 1.05rem;
+            line-height: 1.8;
+            color: #3a332c;
+        }
+        .about-story blockquote {
+            border-left: 4px solid #b35e3a;
+            padding: 0.5rem 0 0.5rem 1.8rem;
+            margin: 2rem 0;
+            font-family: 'Source Serif 4', serif;
+            font-size: 1.2rem;
+            font-style: italic;
+            color: #5a4e42;
+            line-height: 1.6;
+        }
+        .about-story blockquote cite {
+            display: block;
+            font-style: normal;
+            font-size: 0.95rem;
+            font-family: 'Inter', sans-serif;
+            color: #7a6b5d;
+            margin-top: 0.6rem;
+        }
+
+        .values-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 2rem;
+            margin: 2.5rem 0 3rem;
+        }
+        .value-card {
+            background: #fff;
+            border: 1px solid #ede7df;
+            border-radius: 10px;
+            padding: 2rem 1.8rem;
+            transition: border-color 0.2s, box-shadow 0.2s;
+        }
+        .value-card:hover {
+            border-color: #d9cfc2;
+            box-shadow: 0 4px 14px rgba(0, 0, 0, 0.02);
+        }
+        .value-icon {
+            font-size: 2rem;
+            margin-bottom: 0.8rem;
+            display: block;
+        }
+        .value-card h3 {
+            font-size: 1.2rem;
+            margin-bottom: 0.6rem;
+        }
+        .value-card p {
+            font-size: 0.95rem;
+            color: #5a4e42;
+            line-height: 1.6;
+            margin-bottom: 0;
+        }
+
+        .kitchen-note {
+            background: #f5efe8;
+            border-radius: 12px;
+            padding: 2.5rem 3rem;
+            margin: 3rem 0;
+            display: flex;
+            align-items: center;
+            gap: 2.5rem;
+            border: 1px solid #e0d6ca;
+        }
+        .kitchen-note img {
+            width: 180px;
+            height: 180px;
+            border-radius: 50%;
+            object-fit: cover;
+            flex-shrink: 0;
+            background: #e4ddd3;
+            border: 3px solid #fff;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.04);
+        }
+        .kitchen-note-content h3 {
+            font-size: 1.4rem;
+            margin-bottom: 0.5rem;
+        }
+        .kitchen-note-content p {
+            font-size: 1rem;
+            color: #4a423a;
+            margin-bottom: 0.8rem;
+            line-height: 1.7;
+        }
+        .kitchen-note-content .email {
+            font-weight: 600;
+            color: #b35e3a;
+        }
+
+        .about-cta {
+            text-align: center;
+            margin: 3rem 0 2rem;
+            padding: 2.5rem 2rem;
+            background: #fff;
+            border-radius: 12px;
+            border: 1px solid #ede7df;
+        }
+        .about-cta h2 {
+            font-size: 1.8rem;
+            margin-bottom: 0.8rem;
+        }
+        .about-cta p {
+            max-width: 550px;
+            margin: 0 auto 1.5rem;
+            color: #4a423a;
+        }
+        .btn-primary {
+            display: inline-block;
+            background: #5f4b3a;
+            color: #fff;
+            padding: 0.8rem 2rem;
+            border-radius: 40px;
+            font-weight: 600;
+            font-size: 0.95rem;
+            transition: background 0.15s;
+            border: none;
+            cursor: pointer;
+            font-family: 'Inter', sans-serif;
+        }
+        .btn-primary:hover {
+            background: #b35e3a;
+            color: #fff;
+        }
+
+        /* --- FOOTER (same as index) --- */
+        .site-footer {
+            background: #2d2a24;
+            color: #d9cfc2;
+            padding: 3rem 0 2rem;
+            margin-top: 3rem;
+            border-top: 4px solid #b35e3a;
+        }
+        .footer-grid {
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr 1fr;
+            gap: 2.5rem;
+        }
+        .footer-brand p {
+            font-size: 0.9rem;
+            color: #b8ab9d;
+            margin-top: 0.8rem;
+            max-width: 300px;
+            line-height: 1.6;
+        }
+        .footer-brand .logo-text {
+            color: #fbf8f4;
+        }
+        .footer-brand .logo-text span {
+            color: #d98b6b;
+        }
+        .footer-col h4 {
+            font-family: 'Inter', sans-serif;
+            font-size: 0.85rem;
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
+            color: #fbf8f4;
+            margin-bottom: 1rem;
+            font-weight: 600;
+        }
+        .footer-col ul {
+            list-style: none;
+            display: flex;
+            flex-direction: column;
+            gap: 0.5rem;
+        }
+        .footer-col ul a {
+            color: #b8ab9d;
+            font-size: 0.9rem;
+        }
+        .footer-col ul a:hover {
+            color: #fbf8f4;
+        }
+        .footer-bottom {
+            border-top: 1px solid #4a423a;
+            margin-top: 2.5rem;
+            padding-top: 1.5rem;
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 1rem;
+            font-size: 0.85rem;
+            color: #9b8e80;
+        }
+
+        /* --- RESPONSIVE --- */
+        @media (max-width: 1024px) {
+            .about-hero {
+                grid-template-columns: 1fr 1fr;
+                gap: 2rem;
+            }
+            .values-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+            .footer-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+        }
+        @media (max-width: 820px) {
+            .about-hero {
+                grid-template-columns: 1fr;
+                gap: 1.5rem;
+            }
+            .about-hero-image {
+                height: 260px;
+            }
+            .about-hero-content h1 {
+                font-size: 2rem;
+            }
+            .about-story {
+                padding: 1.8rem 1.5rem;
+            }
+            .values-grid {
+                grid-template-columns: 1fr;
+                gap: 1.5rem;
+            }
+            .kitchen-note {
+                flex-direction: column;
+                text-align: center;
+                padding: 2rem 1.5rem;
+            }
+            .kitchen-note img {
+                width: 140px;
+                height: 140px;
+            }
+            .header-inner {
+                flex-wrap: wrap;
+            }
+            .nav-links {
+                order: 3;
+                width: 100%;
+                justify-content: flex-start;
+                gap: 1.2rem;
+                font-size: 0.9rem;
+                padding-top: 0.5rem;
+                border-top: 1px solid #ede7df;
+                margin-top: 0.5rem;
+            }
+            .search-bar {
+                max-width: 180px;
+            }
+            h1 {
+                font-size: 1.9rem;
+            }
+        }
+        @media (max-width: 600px) {
+            .container {
+                padding: 0 1rem;
+            }
+            .header-inner {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+            .search-bar {
+                max-width: 100%;
+                width: 100%;
+            }
+            .nav-links {
+                flex-wrap: wrap;
+                gap: 0.8rem 1.2rem;
+            }
+            .about-story {
+                padding: 1.5rem 1.2rem;
+            }
+            .about-hero-content h1 {
+                font-size: 1.7rem;
+            }
+            .footer-grid {
+                grid-template-columns: 1fr;
+                gap: 1.8rem;
+            }
+            .about-cta {
+                padding: 2rem 1.2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- HEADER (same as index) -->
+    <header class="site-header">
+        <div class="container header-inner">
+            <div class="logo">
+                <div class="logo-icon">F</div>
+                <div class="logo-text">Feather<span>Spoon Pantry</span></div>
+            </div>
+            <nav>
+                <ul class="nav-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html" class="active">About</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="terms.html">Terms Of Privacy</a></li>
+                    <li><a href="privacy.html">Privacy Policy</a></li>
+                    <li><a href="cookies.html">Cookies Policy</a></li>
+                    <li><a href="disclaimer.html">Disclaimer</a></li>
+                    <li><a href="categories.html">Categories</a></li>
+                </ul>
+            </nav>
+            <div class="search-bar">
+                <input type="text" id="searchInput" placeholder="Search recipes..." aria-label="Search recipes">
+                <button id="searchBtn" aria-label="Search">🔍</button>
+            </div>
+        </div>
+    </header>
+
+    <!-- MAIN CONTENT -->
+    <main class="container">
+
+        <!-- ABOUT HERO -->
+        <section class="about-hero">
+            <img class="about-hero-image" src="https://images.unsplash.com/photo-1556911220-bff31c812dba?w=1200&q=80&auto=format&fit=crop" alt="Maren Ellison in her home kitchen, surrounded by fresh ingredients and cast iron pans">
+            <div class="about-hero-content">
+                <h1>About Feather Spoon Pantry</h1>
+                <p class="lead">Slow cooking, honest ingredients, and everyday recipes from an independent kitchen. This is where I share the food I actually make — no shortcuts, no gimmicks, just deeply tested recipes and the stories behind them.</p>
+                <p class="signature">— Maren Ellison, recipe developer & writer</p>
+            </div>
+        </section>
+
+        <!-- STORY SECTION -->
+        <section class="about-story">
+            <h2>My story (and why I started this pantry)</h2>
+            <p>I grew up in a small town in the Pacific Northwest, in a house where the kitchen was the heart of everything. My grandmother cooked on a cast-iron skillet that was older than she was, and she never measured anything — a pinch of this, a handful of that. She taught me that cooking isn't about perfection; it's about paying attention.</p>
+            <p>After culinary school, I spent a decade working in professional kitchens — from a bustling brunch spot in Portland to a Michelin-starred restaurant in San Francisco. I learned technique, speed, and precision. But I also learned that the food that mattered most to people wasn't the fancy stuff. It was the roast chicken on a Tuesday, the pot of beans that simmered all afternoon, the cookies that came out of the oven just as the kids got home from school.</p>
+            <p>In 2018, I started Feather Spoon Pantry as a place to document those everyday recipes. I wanted to create a resource for home cooks that was honest, thorough, and genuinely useful. Every recipe here is tested at least three times in a real home kitchen — not a test kitchen with a team of assistants, but my own kitchen, with my own family waiting to eat.</p>
+            <blockquote>
+                "The best recipes aren't the ones that impress your guests. They're the ones you make so often you don't need to look at the page anymore."
+                <cite>— Maren Ellison</cite>
+            </blockquote>
+            <p>Today, Feather Spoon Pantry is home to hundreds of recipes, pantry guides, and slow-living kitchen wisdom. I write about the "why" behind each step, because I believe that understanding technique makes you a better cook — not just a better recipe-follower. And I still believe in good butter, anchovies, and the quiet magic of a well-stocked pantry.</p>
+        </section>
+
+        <!-- VALUES -->
+        <h2 style="font-family: 'Source Serif 4', serif; font-size: 1.75rem; margin: 2.5rem 0 1.5rem; color: #1e1b17;">What I stand for</h2>
+        <div class="values-grid">
+            <div class="value-card">
+                <span class="value-icon">🧂</span>
+                <h3>Honest ingredients</h3>
+                <p>I cook with real food — whole grains, seasonal vegetables, good olive oil, and salt that actually tastes like something. No weird additives, no unnecessary shortcuts.</p>
+            </div>
+            <div class="value-card">
+                <span class="value-icon">⏳</span>
+                <h3>Slow cooking</h3>
+                <p>Not everything needs to be fast. Some of the best meals take time — a simmering pot of beans, a slow-roasted pork shoulder, a loaf of bread that rises overnight. I make space for that.</p>
+            </div>
+            <div class="value-card">
+                <span class="value-icon">📝</span>
+                <h3>Deeply tested recipes</h3>
+                <p>Each recipe is tested at least three times, with clear instructions, metric and imperial measurements, and substitution notes. You can trust what you find here.</p>
+            </div>
+        </div>
+
+        <!-- KITCHEN NOTE / CONTACT TEASER -->
+        <section class="kitchen-note">
+            <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=400&q=80&auto=format&fit=crop" alt="Maren Ellison, recipe developer and writer">
+            <div class="kitchen-note-content">
+                <h3>From my kitchen to yours</h3>
+                <p>I love hearing from readers — whether you've made a recipe, have a question about an ingredient, or just want to say hello. I read every email, even if I can't always reply right away.</p>
+                <p>You can reach me at <span class="email">hello@featherspoonpantry.com</span>, or follow along on Instagram and Pinterest for daily kitchen notes and behind-the-scenes.</p>
+            </div>
+        </section>
+
+        <!-- CTA -->
+        <section class="about-cta">
+            <h2>Ready to cook something good?</h2>
+            <p>Browse the latest recipes, explore the pantry guides, or subscribe to Sunday Simmer — my weekly newsletter with new recipes and kitchen wisdom.</p>
+            <a href="index.html" class="btn-primary">Explore recipes</a>
+        </section>
+    </main>
+
+    <!-- FOOTER (same as index) -->
+    <footer class="site-footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <div class="logo-text">Feather<span>Spoon</span></div>
+                    <p>Slow cooking, honest ingredients, and everyday recipes from an independent kitchen. Since 2018.</p>
+                </div>
+                <div class="footer-col">
+                    <h4>Explore</h4>
+                    <ul>
+                        <li><a href="#" data-filter="breakfast">Breakfast</a></li>
+                        <li><a href="#" data-filter="mains">Mains</a></li>
+                        <li><a href="#" data-filter="baking">Baking</a></li>
+                        <li><a href="#" data-filter="pantry">Pantry</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>About</h4>
+                    <ul>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                        <li><a href="privacy.html">Privacy Policy</a></li>
+                        <li><a href="terms.html">Terms of Use</a></li>
+                        <li><a href="cookies.html">Cookie Policy</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Follow</h4>
+                    <ul>
+                        <li><a href="#">Instagram</a></li>
+                        <li><a href="#">Pinterest</a></li>
+                        <li><a href="#">YouTube</a></li>
+                        <li><a href="#">RSS Feed</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <span>© 2025 Feather Spoon Pantry. All rights reserved.</span>
+                <span>Made with patience and good butter.</span>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Minimal script for search/filter (no article modal needed on this page) -->
+    <script>
+        // --- Simple filter/search redirection (just for demo, no article grid here) ---
+        const searchInput = document.getElementById('searchInput');
+        const searchBtn = document.getElementById('searchBtn');
+
+        function redirectToHomeWithSearch() {
+            const term = searchInput.value.trim();
+            if (term) {
+                // In a real site, you'd navigate to search results
+                // For this demo, we'll just show an alert
+                alert(`Searching for "${term}" — in the full site, this would show results from all recipes.`);
+            } else {
+                alert('Please enter a search term.');
+            }
+        }
+
+        searchBtn.addEventListener('click', redirectToHomeWithSearch);
+        searchInput.addEventListener('keyup', (e) => {
+            if (e.key === 'Enter') redirectToHomeWithSearch();
+        });
+
+        // --- Footer filter links (just demo) ---
+        document.querySelectorAll('[data-filter]').forEach(link => {
+            link.addEventListener('click', (e) => {
+                e.preventDefault();
+                const filter = link.getAttribute('data-filter');
+                alert(`This would show recipes in the "${filter}" category on the home page.`);
+            });
+        });
+
+        // --- Page links (demo) ---
+        document.querySelectorAll('[data-page]').forEach(link => {
+            link.addEventListener('click', (e) => {
+                e.preventDefault();
+                const page = link.getAttribute('data-page');
+                alert(`This is a demo. The "${page}" page would contain the full ${page} content.`);
+            });
+        });
+    </script>
+</body>
+</html>

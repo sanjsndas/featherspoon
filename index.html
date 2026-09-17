@@ -1,0 +1,1373 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Feather Spoon Pantry — Slow cooking, honest ingredients, and everyday recipes</title>
+    <meta name="description" content="Feather Spoon Pantry is an independent food blog with deeply tested recipes, pantry guides, and slow-living kitchen wisdom. Cook with confidence and curiosity.">
+    <link rel="canonical" href="https://featherspoonpantry.com/">
+    <!-- Open Graph -->
+    <meta property="og:title" content="Feather Spoon Pantry — Slow cooking, honest ingredients, and everyday recipes">
+    <meta property="og:description" content="Independent food blog with deeply tested recipes, pantry guides, and slow-living kitchen wisdom.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://featherspoonpantry.com/">
+    <meta property="og:image" content="https://featherspoonpantry.com/images/feather-spoon-kitchen.jpg">
+    <!-- Schema.org -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Blog",
+      "name": "Feather Spoon Pantry",
+      "url": "https://featherspoonpantry.com/",
+      "description": "Slow cooking, honest ingredients, and everyday recipes from an independent kitchen.",
+      "author": {
+        "@type": "Person",
+        "name": "Maren Ellison"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "Feather Spoon Pantry"
+      }
+    }
+    </script>
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300..600&family=Source+Serif+4:opsz,wght@8..60,400..700&display=swap" rel="stylesheet">
+    <style>
+        /* --- RESET & BASE --- */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            font-size: 100%;
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Inter', system-ui, -apple-system, sans-serif;
+            background-color: #fbf8f4;
+            color: #2d2a24;
+            line-height: 1.6;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        a {
+            color: #5f4b3a;
+            text-decoration: none;
+            transition: color 0.15s ease;
+        }
+
+        a:hover {
+            color: #b35e3a;
+        }
+
+        /* --- TYPOGRAPHY --- */
+        h1, h2, h3, h4 {
+            font-family: 'Source Serif 4', Georgia, serif;
+            font-weight: 600;
+            line-height: 1.25;
+            color: #1e1b17;
+            letter-spacing: -0.01em;
+        }
+
+        h1 {
+            font-size: 2.4rem;
+            font-weight: 700;
+            margin-bottom: 0.5rem;
+        }
+
+        h2 {
+            font-size: 1.75rem;
+            margin-bottom: 1rem;
+        }
+
+        h3 {
+            font-size: 1.3rem;
+            margin-bottom: 0.6rem;
+        }
+
+        p {
+            margin-bottom: 1.2rem;
+        }
+
+        /* --- LAYOUT --- */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 1.5rem;
+        }
+
+        .blog-layout {
+            display: grid;
+            grid-template-columns: 1fr 300px;
+            gap: 3.5rem;
+            margin: 2rem 0 3rem;
+        }
+
+        /* --- HEADER --- */
+        .site-header {
+            background-color: #fbf8f4;
+            border-bottom: 1px solid #e4ddd3;
+            padding: 1.2rem 0;
+        }
+
+        .header-inner {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 1rem;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .logo-icon {
+            width: 32px;
+            height: 32px;
+            background: #5f4b3a;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #fbf8f4;
+            font-size: 1.2rem;
+            font-weight: 600;
+            font-family: 'Source Serif 4', serif;
+        }
+
+        .logo-text {
+            font-family: 'Source Serif 4', serif;
+            font-weight: 700;
+            font-size: 1.5rem;
+            color: #1e1b17;
+            letter-spacing: -0.02em;
+        }
+
+        .logo-text span {
+            color: #b35e3a;
+            font-weight: 400;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 1.8rem;
+            list-style: none;
+            font-size: 0.95rem;
+            font-weight: 500;
+            color: #5a4e42;
+            flex-wrap: wrap;
+        }
+
+        .nav-links a {
+            color: #4f453b;
+            padding-bottom: 2px;
+            border-bottom: 2px solid transparent;
+        }
+
+        .nav-links a:hover {
+            border-bottom-color: #b35e3a;
+            color: #1e1b17;
+        }
+
+        .nav-links a.active {
+            border-bottom-color: #b35e3a;
+            color: #1e1b17;
+            font-weight: 600;
+        }
+
+        .search-bar {
+            display: flex;
+            align-items: center;
+            background: #fff;
+            border: 1px solid #e4ddd3;
+            border-radius: 40px;
+            padding: 0.3rem 0.3rem 0.3rem 1rem;
+            max-width: 220px;
+            transition: border-color 0.2s;
+        }
+
+        .search-bar:focus-within {
+            border-color: #b35e3a;
+        }
+
+        .search-bar input {
+            border: none;
+            background: transparent;
+            padding: 0.4rem 0;
+            font-size: 0.9rem;
+            font-family: 'Inter', sans-serif;
+            color: #2d2a24;
+            outline: none;
+            width: 100%;
+        }
+
+        .search-bar input::placeholder {
+            color: #9b8e80;
+        }
+
+        .search-bar button {
+            background: none;
+            border: none;
+            cursor: pointer;
+            padding: 0.3rem 0.6rem;
+            color: #7a6b5d;
+            font-size: 1rem;
+            transition: color 0.15s;
+        }
+
+        .search-bar button:hover {
+            color: #b35e3a;
+        }
+
+        /* --- MOBILE MENU TOGGLE --- */
+        .menu-toggle {
+            display: none;
+            background: none;
+            border: none;
+            font-size: 1.8rem;
+            color: #4f453b;
+            cursor: pointer;
+            padding: 0.2rem 0.5rem;
+        }
+
+        /* --- FEATURED ARTICLE --- */
+        .featured-article {
+            background-color: #fff;
+            border-radius: 8px;
+            border: 1px solid #ede7df;
+            overflow: hidden;
+            margin-bottom: 2.5rem;
+        }
+
+        .featured-image {
+            width: 100%;
+            height: 280px;
+            object-fit: cover;
+            background-color: #e4ddd3;
+        }
+
+        .featured-content {
+            padding: 2rem 2.2rem;
+        }
+
+        .category-tag {
+            display: inline-block;
+            font-size: 0.75rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.06em;
+            color: #b35e3a;
+            background: #f7ede6;
+            padding: 0.2rem 0.8rem;
+            border-radius: 20px;
+            margin-bottom: 0.8rem;
+        }
+
+        .featured-content h1 {
+            font-size: 2rem;
+            margin-bottom: 0.8rem;
+        }
+
+        .featured-content h1 a {
+            color: #1e1b17;
+        }
+
+        .featured-content h1 a:hover {
+            color: #b35e3a;
+        }
+
+        .meta {
+            font-size: 0.85rem;
+            color: #7a6b5d;
+            display: flex;
+            gap: 1rem;
+            margin-bottom: 1rem;
+            flex-wrap: wrap;
+        }
+
+        .meta span {
+            display: flex;
+            align-items: center;
+            gap: 0.3rem;
+        }
+
+        .excerpt {
+            color: #4a423a;
+            font-size: 1.05rem;
+            line-height: 1.7;
+            margin-bottom: 1.2rem;
+        }
+
+        .read-more {
+            font-weight: 600;
+            font-size: 0.9rem;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.3rem;
+        }
+
+        .read-more:hover {
+            gap: 0.5rem;
+        }
+
+        /* --- ARTICLE GRID --- */
+        .article-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1.8rem;
+            margin-bottom: 3rem;
+        }
+
+        .article-card {
+            background: #fff;
+            border-radius: 8px;
+            border: 1px solid #ede7df;
+            padding: 1.6rem;
+            transition: border-color 0.2s, box-shadow 0.2s;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .article-card:hover {
+            border-color: #d9cfc2;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.02);
+        }
+
+        .article-card .category-tag {
+            font-size: 0.7rem;
+            margin-bottom: 0.5rem;
+            background: #f3ede6;
+        }
+
+        .article-card h3 {
+            font-size: 1.2rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .article-card h3 a {
+            color: #1e1b17;
+        }
+
+        .article-card h3 a:hover {
+            color: #b35e3a;
+        }
+
+        .article-card .meta {
+            font-size: 0.8rem;
+            margin-bottom: 0.7rem;
+        }
+
+        .article-card .excerpt {
+            font-size: 0.95rem;
+            color: #5a4e42;
+            flex-grow: 1;
+        }
+
+        .article-card .read-more {
+            font-size: 0.85rem;
+            margin-top: 0.3rem;
+        }
+
+        /* --- SIDEBAR --- */
+        .sidebar {
+            display: flex;
+            flex-direction: column;
+            gap: 2.2rem;
+        }
+
+        .sidebar-widget {
+            background: #fff;
+            border: 1px solid #ede7df;
+            border-radius: 8px;
+            padding: 1.6rem 1.5rem;
+        }
+
+        .sidebar-widget h3 {
+            font-size: 1.1rem;
+            font-family: 'Source Serif 4', serif;
+            font-weight: 600;
+            margin-bottom: 1rem;
+            padding-bottom: 0.6rem;
+            border-bottom: 1px solid #ede7df;
+            color: #1e1b17;
+        }
+
+        .popular-list {
+            list-style: none;
+            display: flex;
+            flex-direction: column;
+            gap: 0.9rem;
+        }
+
+        .popular-list li a {
+            font-weight: 500;
+            font-size: 0.95rem;
+            color: #3a332c;
+            display: block;
+            line-height: 1.4;
+        }
+
+        .popular-list li a:hover {
+            color: #b35e3a;
+        }
+
+        .popular-list .small-meta {
+            font-size: 0.75rem;
+            color: #8a7b6d;
+            display: block;
+            margin-top: 0.15rem;
+        }
+
+        .author-box {
+            text-align: center;
+        }
+
+        .author-box img {
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            object-fit: cover;
+            margin: 0 auto 0.8rem;
+            background: #e4ddd3;
+        }
+
+        .author-box h4 {
+            font-family: 'Source Serif 4', serif;
+            font-size: 1.1rem;
+            font-weight: 600;
+            margin-bottom: 0.3rem;
+        }
+
+        .author-box p {
+            font-size: 0.85rem;
+            color: #5a4e42;
+            line-height: 1.5;
+        }
+
+        .newsletter-widget {
+            background: #f5efe8;
+            border-color: #e0d6ca;
+        }
+
+        .newsletter-widget p {
+            font-size: 0.9rem;
+            color: #4a423a;
+            margin-bottom: 1rem;
+        }
+
+        .newsletter-form {
+            display: flex;
+            flex-direction: column;
+            gap: 0.6rem;
+        }
+
+        .newsletter-form input {
+            padding: 0.7rem 1rem;
+            border: 1px solid #d9cfc2;
+            border-radius: 6px;
+            font-family: 'Inter', sans-serif;
+            font-size: 0.9rem;
+            background: #fff;
+            outline: none;
+        }
+
+        .newsletter-form input:focus {
+            border-color: #b35e3a;
+        }
+
+        .newsletter-form button {
+            background: #5f4b3a;
+            color: #fff;
+            border: none;
+            padding: 0.7rem 1rem;
+            border-radius: 6px;
+            font-weight: 600;
+            font-size: 0.9rem;
+            cursor: pointer;
+            transition: background 0.15s;
+            font-family: 'Inter', sans-serif;
+        }
+
+        .newsletter-form button:hover {
+            background: #b35e3a;
+        }
+
+        /* --- SECTION HEADINGS --- */
+        .section-heading {
+            font-family: 'Source Serif 4', serif;
+            font-size: 1.5rem;
+            font-weight: 600;
+            margin: 2.5rem 0 1.5rem;
+            padding-bottom: 0.6rem;
+            border-bottom: 1px solid #e4ddd3;
+            color: #1e1b17;
+        }
+
+        /* --- FAQ SECTION --- */
+        .faq-section {
+            background: #fff;
+            border: 1px solid #ede7df;
+            border-radius: 8px;
+            padding: 2rem 2.2rem;
+            margin: 3rem 0;
+        }
+
+        .faq-section h2 {
+            margin-bottom: 1.5rem;
+            font-size: 1.5rem;
+        }
+
+        .faq-item {
+            border-bottom: 1px solid #ede7df;
+            padding: 1rem 0;
+        }
+
+        .faq-item:last-child {
+            border-bottom: none;
+        }
+
+        .faq-question {
+            font-weight: 600;
+            font-size: 1.05rem;
+            font-family: 'Source Serif 4', serif;
+            color: #1e1b17;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        .faq-question:hover {
+            color: #b35e3a;
+        }
+
+        .faq-question .arrow {
+            font-size: 1.2rem;
+            transition: transform 0.2s;
+            color: #7a6b5d;
+        }
+
+        .faq-item.open .arrow {
+            transform: rotate(180deg);
+        }
+
+        .faq-answer {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease, padding 0.3s ease;
+            padding: 0 1rem 0 0;
+            color: #4a423a;
+            font-size: 0.95rem;
+            line-height: 1.7;
+        }
+
+        .faq-item.open .faq-answer {
+            max-height: 300px;
+            padding-top: 0.8rem;
+        }
+
+        /* --- FOOTER --- */
+        .site-footer {
+            background: #2d2a24;
+            color: #d9cfc2;
+            padding: 3rem 0 2rem;
+            margin-top: 3rem;
+            border-top: 4px solid #b35e3a;
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr 1fr;
+            gap: 2.5rem;
+        }
+
+        .footer-brand p {
+            font-size: 0.9rem;
+            color: #b8ab9d;
+            margin-top: 0.8rem;
+            max-width: 300px;
+            line-height: 1.6;
+        }
+
+        .footer-brand .logo-text {
+            color: #fbf8f4;
+        }
+
+        .footer-brand .logo-text span {
+            color: #d98b6b;
+        }
+
+        .footer-col h4 {
+            font-family: 'Inter', sans-serif;
+            font-size: 0.85rem;
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
+            color: #fbf8f4;
+            margin-bottom: 1rem;
+            font-weight: 600;
+        }
+
+        .footer-col ul {
+            list-style: none;
+            display: flex;
+            flex-direction: column;
+            gap: 0.5rem;
+        }
+
+        .footer-col ul a {
+            color: #b8ab9d;
+            font-size: 0.9rem;
+        }
+
+        .footer-col ul a:hover {
+            color: #fbf8f4;
+        }
+
+        .footer-bottom {
+            border-top: 1px solid #4a423a;
+            margin-top: 2.5rem;
+            padding-top: 1.5rem;
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 1rem;
+            font-size: 0.85rem;
+            color: #9b8e80;
+        }
+
+        /* --- MODAL / ARTICLE READING VIEW (HIDDEN BY DEFAULT) --- */
+        .article-view {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(251, 248, 244, 0.98);
+            z-index: 1000;
+            overflow-y: auto;
+            padding: 2rem 1.5rem;
+        }
+
+        .article-view.active {
+            display: block;
+        }
+
+        .article-view-inner {
+            max-width: 720px;
+            margin: 0 auto;
+            background: #fff;
+            border: 1px solid #ede7df;
+            border-radius: 8px;
+            padding: 2.5rem 3rem;
+            position: relative;
+        }
+
+        .close-article {
+            position: sticky;
+            top: 1rem;
+            float: right;
+            background: #fbf8f4;
+            border: 1px solid #e4ddd3;
+            border-radius: 50%;
+            width: 38px;
+            height: 38px;
+            font-size: 1.3rem;
+            cursor: pointer;
+            color: #5a4e42;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: background 0.15s;
+            z-index: 10;
+        }
+
+        .close-article:hover {
+            background: #f0e9e1;
+        }
+
+        .article-view h1 {
+            font-size: 2.2rem;
+            margin: 0.5rem 0 0.8rem;
+        }
+
+        .article-view .meta {
+            margin-bottom: 1.8rem;
+            padding-bottom: 1rem;
+            border-bottom: 1px solid #ede7df;
+        }
+
+        .article-view p {
+            font-size: 1.05rem;
+            line-height: 1.8;
+            color: #3a332c;
+        }
+
+        .article-view h2 {
+            font-size: 1.5rem;
+            margin: 2rem 0 0.8rem;
+        }
+
+        .article-view h3 {
+            font-size: 1.2rem;
+            margin: 1.5rem 0 0.6rem;
+        }
+
+        .article-view ul, .article-view ol {
+            margin: 1rem 0 1.5rem 1.5rem;
+            color: #3a332c;
+            line-height: 1.8;
+        }
+
+        .article-view li {
+            margin-bottom: 0.4rem;
+        }
+
+        .article-view blockquote {
+            border-left: 3px solid #b35e3a;
+            padding-left: 1.2rem;
+            margin: 1.5rem 0;
+            font-style: italic;
+            color: #5a4e42;
+        }
+
+        /* --- RESPONSIVE --- */
+        @media (max-width: 1024px) {
+            .blog-layout {
+                grid-template-columns: 1fr 260px;
+                gap: 2.5rem;
+            }
+            .footer-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+        }
+
+        @media (max-width: 820px) {
+            .blog-layout {
+                grid-template-columns: 1fr;
+            }
+            .sidebar {
+                margin-top: 2rem;
+            }
+            .header-inner {
+                flex-wrap: wrap;
+            }
+            .nav-links {
+                order: 3;
+                width: 100%;
+                justify-content: flex-start;
+                gap: 1.2rem;
+                font-size: 0.9rem;
+                padding-top: 0.5rem;
+                border-top: 1px solid #ede7df;
+                margin-top: 0.5rem;
+            }
+            .search-bar {
+                max-width: 180px;
+            }
+            .article-grid {
+                grid-template-columns: 1fr;
+            }
+            .article-view-inner {
+                padding: 1.8rem 1.5rem;
+            }
+            .article-view h1 {
+                font-size: 1.7rem;
+            }
+            h1 {
+                font-size: 1.9rem;
+            }
+        }
+
+        @media (max-width: 600px) {
+            .container {
+                padding: 0 1rem;
+            }
+            .header-inner {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+            .search-bar {
+                max-width: 100%;
+                width: 100%;
+            }
+            .nav-links {
+                flex-wrap: wrap;
+                gap: 0.8rem 1.2rem;
+            }
+            .featured-content {
+                padding: 1.5rem 1.2rem;
+            }
+            .featured-content h1 {
+                font-size: 1.5rem;
+            }
+            .featured-image {
+                height: 200px;
+            }
+            .article-card {
+                padding: 1.2rem;
+            }
+            .faq-section {
+                padding: 1.5rem 1.2rem;
+            }
+            .footer-grid {
+                grid-template-columns: 1fr;
+                gap: 1.8rem;
+            }
+            .article-view-inner {
+                padding: 1.5rem 1rem;
+            }
+            .article-view h1 {
+                font-size: 1.5rem;
+            }
+            .close-article {
+                width: 34px;
+                height: 34px;
+                font-size: 1.1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- HEADER -->
+    <header class="site-header">
+        <div class="container header-inner">
+            <div class="logo">
+                <div class="logo-icon">F</div>
+                <div class="logo-text">Feather<span>Spoon Pantry</span></div>
+            </div>
+            <nav>
+                <ul class="nav-links">
+                       <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="terms.html">Terms Of Privacy</a></li>
+                    <li><a href="privacy.html">Privacy Policy</a></li>
+					<li><a href="cookies.html">Cookies Policy</a></li> 
+                    <li><a href="disclaimer.html">Disclaimer</a></li>
+                    <li><a href="categories.html">Categories</a></li>
+                </ul>
+            </nav>
+            <div class="search-bar">
+                <input type="text" id="searchInput" placeholder="Search recipes..." aria-label="Search recipes">
+                <button id="searchBtn" aria-label="Search">🔍</button>
+            </div>
+            <button class="menu-toggle" aria-label="Menu">☰</button>
+        </div>
+    </header>
+
+    <!-- MAIN CONTENT -->
+    <main class="container">
+        <!-- FEATURED ARTICLE -->
+        <section class="featured-article" id="featuredArticle">
+            <img class="featured-image" src="https://images.unsplash.com/photo-1556911220-bff31c812dba?w=1200&q=80&auto=format&fit=crop" alt="Rustic kitchen counter with fresh bread, vegetables, and a wooden spoon">
+            <div class="featured-content">
+                <span class="category-tag">Pantry</span>
+                <h1><a href="#" data-article="featured">The Quiet Art of a Well-Stocked Pantry: A Guide to Cooking Without a Plan</a></h1>
+                <div class="meta">
+                    <span>📅 March 12, 2025</span>
+                    <span>⏱ 8 min read</span>
+                    <span>✍ Maren Ellison</span>
+                </div>
+                <p class="excerpt">A well-stocked pantry isn't about hoarding—it's about freedom. When you have the right staples, dinner becomes a conversation between what you have and what you crave. Here's how I built mine over fifteen years of home cooking.</p>
+                <a href="#" class="read-more" data-article="featured">Read the full article →</a>
+            </div>
+        </section>
+
+        <!-- BLOG LAYOUT: ARTICLES + SIDEBAR -->
+        <div class="blog-layout">
+            <!-- ARTICLES COLUMN -->
+            <div class="articles-column">
+                <h2 class="section-heading">Latest Recipes & Stories</h2>
+                <div class="article-grid" id="articleGrid">
+                    <!-- Article cards injected by JS -->
+                </div>
+            </div>
+
+            <!-- SIDEBAR -->
+            <aside class="sidebar">
+                <div class="sidebar-widget author-box">
+                    <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=200&q=80&auto=format&fit=crop" alt="Maren Ellison, recipe developer and writer">
+                    <h4>Maren Ellison</h4>
+                    <p>I've been cooking professionally and at home for two decades. Feather Spoon Pantry is where I share the recipes that actually work—and the stories behind them.</p>
+                </div>
+
+                <div class="sidebar-widget">
+                    <h3>Popular This Week</h3>
+                    <ul class="popular-list" id="popularList">
+                        <!-- Injected -->
+                    </ul>
+                </div>
+
+                <div class="sidebar-widget newsletter-widget">
+                    <h3>Sunday Simmer</h3>
+                    <p>One thoughtful email each week. New recipes, pantry tips, and what I'm cooking.</p>
+                    <form class="newsletter-form" id="sidebarNewsletter">
+                        <input type="email" placeholder="Your email address" required aria-label="Email address">
+                        <button type="submit">Subscribe</button>
+                    </form>
+                </div>
+            </aside>
+        </div>
+
+        <!-- FAQ -->
+        <section class="faq-section">
+            <h2>Frequently Asked Questions</h2>
+            <div class="faq-item">
+                <div class="faq-question" role="button" tabindex="0">What makes Feather Spoon Pantry different?<span class="arrow">▼</span></div>
+                <div class="faq-answer">Every recipe is tested at least three times in a real home kitchen. I focus on whole ingredients, clear instructions, and the "why" behind each step—so you learn to cook, not just follow.</div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-question" role="button" tabindex="0">Do you use metric or imperial measurements?<span class="arrow">▼</span></div>
+                <div class="faq-answer">Both. Every recipe includes grams and cups/ounces, because precision matters for baking but flexibility is fine for soups and stews.</div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-question" role="button" tabindex="0">Can I substitute ingredients?<span class="arrow">▼</span></div>
+                <div class="faq-answer">Absolutely. I include substitution notes in most recipes, and my pantry guides explain how to swap smartly without ruining texture or flavor.</div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-question" role="button" tabindex="0">How often do you publish new recipes?<span class="arrow">▼</span></div>
+                <div class="faq-answer">Two to three times a week, plus a weekly newsletter on Sundays. Quality over quantity—each recipe is developed slowly.</div>
+            </div>
+        </section>
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="site-footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <div class="logo-text">Feather<span>Spoon</span></div>
+                    <p>Slow cooking, honest ingredients, and everyday recipes from an independent kitchen. Since 2018.</p>
+                </div>
+                <div class="footer-col">
+                    <h4>Explore</h4>
+                    <ul>
+                        <li><a href="#" data-filter="breakfast">Breakfast</a></li>
+                        <li><a href="#" data-filter="mains">Mains</a></li>
+                        <li><a href="#" data-filter="baking">Baking</a></li>
+                        <li><a href="#" data-filter="pantry">Pantry</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>About</h4>
+                    <ul>
+                        <li><a href="#" data-page="about">About Us</a></li>
+                        <li><a href="#" data-page="contact">Contact</a></li>
+                        <li><a href="#" data-page="privacy">Privacy Policy</a></li>
+                        <li><a href="#" data-page="terms">Terms of Use</a></li>
+                        <li><a href="#" data-page="cookies">Cookie Policy</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Follow</h4>
+                    <ul>
+                        <li><a href="#">Instagram</a></li>
+                        <li><a href="#">Pinterest</a></li>
+                        <li><a href="#">YouTube</a></li>
+                        <li><a href="#">RSS Feed</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <span>© 2025 Feather Spoon Pantry. All rights reserved.</span>
+                <span>Made with patience and good butter.</span>
+            </div>
+        </div>
+    </footer>
+
+    <!-- ARTICLE READING VIEW (MODAL) -->
+    <div class="article-view" id="articleView">
+        <div class="article-view-inner">
+            <button class="close-article" id="closeArticle" aria-label="Close article">×</button>
+            <div id="articleContent">
+                <!-- Dynamic content -->
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // --- ARTICLE DATA ---
+        const articles = [
+            {
+                id: 'featured',
+                title: 'The Quiet Art of a Well-Stocked Pantry: A Guide to Cooking Without a Plan',
+                category: 'pantry',
+                categoryLabel: 'Pantry',
+                excerpt: 'A well-stocked pantry isn\'t about hoarding—it\'s about freedom. When you have the right staples, dinner becomes a conversation between what you have and what you crave. Here\'s how I built mine over fifteen years of home cooking.',
+                readingTime: '8 min read',
+                date: 'March 12, 2025',
+                author: 'Maren Ellison',
+                image: 'https://images.unsplash.com/photo-1556911220-bff31c812dba?w=1200&q=80&auto=format&fit=crop',
+                content: `
+                    <span class="category-tag">Pantry</span>
+                    <h1>The Quiet Art of a Well-Stocked Pantry: A Guide to Cooking Without a Plan</h1>
+                    <div class="meta"><span>📅 March 12, 2025</span><span>⏱ 8 min read</span><span>✍ Maren Ellison</span></div>
+                    <p>There's a particular kind of magic that happens when you open your pantry and realize you have everything you need to make something deeply satisfying—without a trip to the store. It's not about stockpiling; it's about curation. Over fifteen years of cooking professionally and at home, I've learned that a good pantry is less about quantity and more about intention.</p>
+                    <p>The foundation of my pantry is built on what I call "the quiet nine": good olive oil, flaky salt, whole peppercorns, tinned anchovies, dried pasta, canned tomatoes, onions, garlic, and a hard aged cheese. These aren't glamorous ingredients, but they're the ones I reach for every single day. They form the backbone of countless meals, from a simple aglio e olio to a slow-simmered ragù.</p>
+                    <h2>Start with fat and acid</h2>
+                    <p>Every great dish needs both. For fat, I keep extra-virgin olive oil for finishing, a neutral oil for cooking, and a jar of good butter in the fridge. For acid, I have red wine vinegar, sherry vinegar, lemons, and a small bottle of aged balsamic. These two elements alone can transform a bland dish into something memorable.</p>
+                    <h2>The spice drawer that works</h2>
+                    <p>You don't need forty spices. You need ten that you actually use. Mine are: cumin, coriander, smoked paprika, sweet paprika, cinnamon, nutmeg, red pepper flakes, bay leaves, dried oregano, and a good curry powder. I buy them whole when possible and grind them fresh. The difference is staggering.</p>
+                    <h2>Building meals without a recipe</h2>
+                    <p>Once your pantry is in order, cooking becomes intuitive. A can of chickpeas, a tin of tomatoes, an onion, and a spoonful of spices becomes a vibrant stew. Pasta, garlic, anchovies, and breadcrumbs become a weeknight masterpiece. The goal isn't to follow a recipe—it's to develop a rhythm, a sense of what goes with what.</p>
+                    <blockquote>"The best meals I've ever made were the ones I didn't plan. They came from looking at what I had and trusting my instincts."</blockquote>
+                    <p>I encourage you to spend a Sunday afternoon auditing your own pantry. Pull everything out, wipe the shelves, and ask yourself: what do I actually use? What's been sitting there for two years? Build from there. Your future self—hungry at 7 p.m. on a Tuesday—will thank you.</p>
+                `
+            },
+            {
+                id: 'art1',
+                title: 'Overnight Oats, Reimagined: Five Combinations That Actually Taste Good',
+                category: 'breakfast',
+                categoryLabel: 'Breakfast',
+                excerpt: 'Overnight oats have a reputation problem—soggy, bland, and sad. But with the right ratios and a few smart additions, they become a genuinely luxurious breakfast.',
+                readingTime: '6 min read',
+                date: 'March 10, 2025',
+                author: 'Maren Ellison',
+                content: `
+                    <span class="category-tag">Breakfast</span>
+                    <h1>Overnight Oats, Reimagined: Five Combinations That Actually Taste Good</h1>
+                    <div class="meta"><span>📅 March 10, 2025</span><span>⏱ 6 min read</span><span>✍ Maren Ellison</span></div>
+                    <p>I used to hate overnight oats. They were always either too thick or too thin, too sweet or too bland. Then I realized the problem wasn't the concept—it was the execution. The magic ratio is 1 part oats to 1.5 parts liquid, plus a pinch of salt and a spoonful of something rich. Here are five combinations I make on repeat.</p>
+                    <h2>1. Tahini & Honey</h2>
+                    <p>Stir a tablespoon of tahini and a teaspoon of honey into the base. Top with toasted sesame seeds and sliced figs. The tahini adds a savory depth that balances the sweetness beautifully.</p>
+                    <h2>2. Espresso & Cocoa</h2>
+                    <p>Add a shot of cooled espresso and a tablespoon of cocoa powder. Sweeten with maple syrup and top with cacao nibs. It's like a mocha in breakfast form.</p>
+                    <h2>3. Cardamom & Pear</h2>
+                    <p>Grate a pear into the oats, add a pinch of ground cardamom, and a drizzle of maple. The pear softens overnight and becomes almost jammy.</p>
+                    <h2>4. Peanut Butter & Jam</h2>
+                    <p>The classic. A big spoonful of peanut butter, a spoonful of your favorite jam, and a handful of raspberries. It tastes like childhood but better.</p>
+                    <h2>5. Miso & Banana</h2>
+                    <p>Trust me on this one. A teaspoon of white miso dissolved in the liquid adds a salty umami that makes the banana taste sweeter. Top with toasted coconut.</p>
+                    <p>All of these can be made in a jar the night before. In the morning, give them a stir, add a splash of milk if needed, and you're done.</p>
+                `
+            },
+            {
+                id: 'art2',
+                title: 'The Only Roast Chicken Recipe You Need (With Crispy Skin Every Time)',
+                category: 'mains',
+                categoryLabel: 'Mains',
+                excerpt: 'A perfectly roasted chicken is a fundamental skill. This method uses a dry brine, high heat, and a simple resting period to guarantee juicy meat and shatteringly crisp skin.',
+                readingTime: '7 min read',
+                date: 'March 8, 2025',
+                author: 'Maren Ellison',
+                content: `
+                    <span class="category-tag">Mains</span>
+                    <h1>The Only Roast Chicken Recipe You Need (With Crispy Skin Every Time)</h1>
+                    <div class="meta"><span>📅 March 8, 2025</span><span>⏱ 7 min read</span><span>✍ Maren Ellison</span></div>
+                    <p>Roast chicken is the ultimate test of a home cook. It's simple, but it's not easy. The good news is that with a few key techniques, you can achieve perfection every time.</p>
+                    <h2>Dry brine is non-negotiable</h2>
+                    <p>At least 4 hours before roasting—ideally 24—rub the chicken all over with kosher salt. Leave it uncovered in the fridge. The salt draws out moisture, which then reabsorbs, seasoning the meat deeply. The dry air of the fridge dries the skin, which is the secret to crispiness.</p>
+                    <h2>High heat, then moderate</h2>
+                    <p>Start the oven at 450°F (230°C) for the first 20 minutes. This blasts the skin with heat, rendering fat and starting the crisping process. Then lower to 375°F (190°C) for the remainder, until the thickest part of the thigh reads 165°F (74°C).</p>
+                    <h2>Rest, rest, rest</h2>
+                    <p>This is the step everyone skips. Rest the chicken for at least 15 minutes, tented loosely with foil. This allows the juices to redistribute. If you cut into it immediately, they'll all run out onto the board.</p>
+                    <h2>What to do with the pan drippings</h2>
+                    <p>Don't throw them away. Spoon them over the carved meat, or whisk them into a quick pan sauce with a splash of wine and a knob of butter. That's liquid gold.</p>
+                `
+            },
+            {
+                id: 'art3',
+                title: 'Brown Butter Chocolate Chip Cookies: The Science of Chewy',
+                category: 'baking',
+                categoryLabel: 'Baking',
+                excerpt: 'Brown butter adds a nutty, toffee-like depth that transforms a classic cookie. But it also changes the dough\'s hydration. Here\'s how to adapt.',
+                readingTime: '9 min read',
+                date: 'March 5, 2025',
+                author: 'Maren Ellison',
+                content: `
+                    <span class="category-tag">Baking</span>
+                    <h1>Brown Butter Chocolate Chip Cookies: The Science of Chewy</h1>
+                    <div class="meta"><span>📅 March 5, 2025</span><span>⏱ 9 min read</span><span>✍ Maren Ellison</span></div>
+                    <p>Brown butter is one of those ingredients that makes everything better. It's butter that's been cooked until the milk solids toast, creating a deep, nutty flavor. But when you use it in cookies, you're removing water—and that affects the final texture.</p>
+                    <h2>The water problem</h2>
+                    <p>Butter is about 15% water. When you brown it, you evaporate most of that. So if a recipe calls for 1 cup of butter, and you brown it, you're short on liquid. The fix? Add a tablespoon or two of water back into the browned butter before mixing. This ensures the dough has enough hydration to create steam during baking, which helps the cookies rise and stay chewy.</p>
+                    <h2>Chill the dough</h2>
+                    <p>This is the other secret. Chilling the dough for at least 24 hours allows the flour to hydrate fully and the flavors to meld. It also prevents the cookies from spreading too much in the oven. The result is a thicker, chewier cookie with a deeper caramel flavor.</p>
+                    <h2>Underbake slightly</h2>
+                    <p>Pull them out when the centers still look a little underdone. They'll continue to set on the hot pan. This is the difference between a good cookie and a great one.</p>
+                `
+            },
+            {
+                id: 'art4',
+                title: 'A Guide to Beans: Soaking, Cooking, and Why Canned Is Fine',
+                category: 'pantry',
+                categoryLabel: 'Pantry',
+                excerpt: 'Dried beans are cheaper and tastier, but canned beans are a legitimate shortcut. Here\'s when to use each, and how to make both taste exceptional.',
+                readingTime: '5 min read',
+                date: 'March 3, 2025',
+                author: 'Maren Ellison',
+                content: `
+                    <span class="category-tag">Pantry</span>
+                    <h1>A Guide to Beans: Soaking, Cooking, and Why Canned Is Fine</h1>
+                    <div class="meta"><span>📅 March 3, 2025</span><span>⏱ 5 min read</span><span>✍ Maren Ellison</span></div>
+                    <p>I love dried beans. I love the ritual of soaking them overnight, the way they plump up, the rich broth they create. But I also have a job, a family, and a life. So I keep canned beans in my pantry too. And that's okay.</p>
+                    <h2>When to use dried</h2>
+                    <p>When you want the beans to be the star of the dish—a cassoulet, a pot of creamy cannellini, a smoky black bean soup. Dried beans have a superior texture and flavor, and you control the salt.</p>
+                    <h2>When to use canned</h2>
+                    <p>When you need dinner in 20 minutes. Canned beans are already cooked and seasoned. The key is to rinse them well and then season them yourself. A squeeze of lemon, a glug of olive oil, and some fresh herbs can transform a can of beans into something delicious.</p>
+                    <h2>The quick-soak method</h2>
+                    <p>If you forgot to soak, cover the beans with water, bring to a boil, turn off the heat, and let them sit for an hour. It's not quite as good as an overnight soak, but it works in a pinch.</p>
+                `
+            },
+            {
+                id: 'art5',
+                title: 'How to Make Any Soup Taste Better (Without a Recipe)',
+                category: 'techniques',
+                categoryLabel: 'Techniques',
+                excerpt: 'Soup is forgiving, but there\'s a difference between a pot of simmered vegetables and a soup that sings. These five principles will change the way you cook.',
+                readingTime: '6 min read',
+                date: 'February 28, 2025',
+                author: 'Maren Ellison',
+                content: `
+                    <span class="category-tag">Techniques</span>
+                    <h1>How to Make Any Soup Taste Better (Without a Recipe)</h1>
+                    <div class="meta"><span>📅 February 28, 2025</span><span>⏱ 6 min read</span><span>✍ Maren Ellison</span></div>
+                    <p>Soup is the most forgiving thing you can make. But there's a difference between a pot of simmered vegetables and a soup that makes you close your eyes. Here are five principles I use every time.</p>
+                    <h2>1. Build a flavor base</h2>
+                    <p>Almost every soup starts with aromatics—onion, carrot, celery, garlic. Cook them slowly in fat until they're soft and sweet, not just translucent. This is called the "fond," and it's the foundation of flavor.</p>
+                    <h2>2. Layer your umami</h2>
+                    <p>Tomato paste, soy sauce, miso, anchovy, dried mushrooms, Parmesan rind. These ingredients add depth that salt alone can't provide. A spoonful of miso stirred into a vegetable soup at the end can make it taste like it simmered all day.</p>
+                    <h2>3. Acid at the end</h2>
+                    <p>A squeeze of lemon, a splash of vinegar, a spoonful of yogurt. Acid brightens everything. Taste your soup before serving, and if it tastes flat, add acid before you add salt.</p>
+                    <h2>4. Texture matters</h2>
+                    <p>A soup that's all one texture is boring. Add something crunchy—toasted nuts, croutons, fried shallots, fresh herbs. It makes each bite interesting.</p>
+                    <h2>5. Finish with fat</h2>
+                    <p>A drizzle of good olive oil, a swirl of cream, a pat of butter. Fat carries flavor and adds a luxurious mouthfeel. It's the final touch that makes a soup feel complete.</p>
+                `
+            },
+            {
+                id: 'art6',
+                title: 'The Case for Cooking with Cast Iron (And How to Care for It)',
+                category: 'techniques',
+                categoryLabel: 'Techniques',
+                excerpt: 'Cast iron is the most versatile pan in my kitchen. It sears, bakes, fries, and even goes camping. Here\'s why it\'s worth the effort—and how to keep it perfect.',
+                readingTime: '5 min read',
+                date: 'February 25, 2025',
+                author: 'Maren Ellison',
+                content: `
+                    <span class="category-tag">Techniques</span>
+                    <h1>The Case for Cooking with Cast Iron (And How to Care for It)</h1>
+                    <div class="meta"><span>📅 February 25, 2025</span><span>⏱ 5 min read</span><span>✍ Maren Ellison</span></div>
+                    <p>My grandmother cooked everything in cast iron. She had one skillet that was so well-seasoned it was almost black, and nothing ever stuck to it. I inherited that skillet, and it's still going strong.</p>
+                    <h2>Why cast iron?</h2>
+                    <p>It's virtually indestructible. It holds heat beautifully, which makes it perfect for searing steak or baking cornbread. It adds a small amount of iron to your food, which is a bonus. And it gets better with age.</p>
+                    <h2>How to season it</h2>
+                    <p>Seasoning is just polymerized oil—a layer of fat that's been baked onto the surface. To maintain it, after each use, wash the pan with hot water and a stiff brush (no soap, or a tiny amount if you must), dry it thoroughly, and rub a thin layer of oil over the surface. Heat it on the stove until it just smokes, then let it cool.</p>
+                    <h2>What not to do</h2>
+                    <p>Don't soak it in water. Don't put it in the dishwasher. Don't cook acidic foods like tomatoes or wine in it for long periods, as that can strip the seasoning. But other than that, use it for everything.</p>
+                `
+            },
+            {
+                id: 'art7',
+                title: 'Weeknight Pasta with Anchovy, Garlic, and Breadcrumbs',
+                category: 'mains',
+                categoryLabel: 'Mains',
+                excerpt: 'This is the pasta I make when I\'m too tired to think but still want something deeply satisfying. It comes together in the time it takes to boil water.',
+                readingTime: '4 min read',
+                date: 'February 22, 2025',
+                author: 'Maren Ellison',
+                content: `
+                    <span class="category-tag">Mains</span>
+                    <h1>Weeknight Pasta with Anchovy, Garlic, and Breadcrumbs</h1>
+                    <div class="meta"><span>📅 February 22, 2025</span><span>⏱ 4 min read</span><span>✍ Maren Ellison</span></div>
+                    <p>This is not a fancy dish. It's the kind of thing you make on a Tuesday when you've had a long day and you just want something salty and carb-y and good. The anchovies melt into the oil, leaving behind a deep savoriness that doesn't taste fishy at all.</p>
+                    <h2>Ingredients</h2>
+                    <ul>
+                        <li>200g spaghetti or linguine</li>
+                        <li>4-5 anchovy fillets in oil</li>
+                        <li>3 cloves garlic, thinly sliced</li>
+                        <li>1/2 teaspoon red pepper flakes</li>
+                        <li>1/4 cup olive oil</li>
+                        <li>1/2 cup coarse breadcrumbs (from stale bread)</li>
+                        <li>Zest of 1 lemon</li>
+                        <li>Salt and pepper</li>
+                        <li>Fresh parsley, chopped</li>
+                    </ul>
+                    <h2>Method</h2>
+                    <p>Boil the pasta in well-salted water. While it cooks, heat the olive oil in a large skillet over medium heat. Add the anchovies and cook, mashing them with a spoon, until they dissolve. Add the garlic and red pepper flakes and cook for 1 minute, until fragrant. Add the breadcrumbs and toast until golden. Drain the pasta, reserving a cup of pasta water. Add the pasta to the skillet, toss to coat, adding pasta water as needed to make a glossy sauce. Finish with lemon zest, parsley, and a drizzle of olive oil.</p>
+                `
+            },
+            {
+                id: 'art8',
+                title: 'How to Stock a Spice Drawer That You\'ll Actually Use',
+                category: 'pantry',
+                categoryLabel: 'Pantry',
+                excerpt: 'Most spice drawers are filled with jars that are years old and flavorless. Here\'s how to build a curated collection that earns its place.',
+                readingTime: '5 min read',
+                date: 'February 18, 2025',
+                author: 'Maren Ellison',
+                content: `
+                    <span class="category-tag">Pantry</span>
+                    <h1>How to Stock a Spice Drawer That You'll Actually Use</h1>
+                    <div class="meta"><span>📅 February 18, 2025</span><span>⏱ 5 min read</span><span>✍ Maren Ellison</span></div>
+                    <p>Spices are expensive, and they lose their potency quickly. There's nothing sadder than a jar of cumin that's been sitting in the back of the cabinet since 2019. Here's how to build a spice collection that works.</p>
+                    <h2>Buy whole, grind fresh</h2>
+                    <p>Whole spices last much longer than ground. Buy cumin seeds, coriander seeds, and peppercorns whole, and grind them as needed. A small coffee grinder or mortar and pestle works perfectly.</p>
+                    <h2>The essential ten</h2>
+                    <p>Cumin, coriander, smoked paprika, sweet paprika, cinnamon, nutmeg, red pepper flakes, bay leaves, dried oregano, and a good curry powder. That's it. You can cook almost anything with these.</p>
+                    <h2>Store them properly</h2>
+                    <p>Keep spices away from heat, light, and moisture. A drawer near the stove is the worst place. I keep mine in a cool cupboard, in small jars with tight-fitting lids. Label everything with the date you bought it.</p>
+                    <h2>Replace regularly</h2>
+                    <p>Ground spices last about six months, whole spices about a year. If a spice smells like nothing, it's time to replace it. Your food will thank you.</p>
+                `
+            }
+        ];
+
+        // --- RENDER ARTICLES ---
+        const articleGrid = document.getElementById('articleGrid');
+
+        function renderArticles(filter = 'all', searchTerm = '') {
+            let filtered = articles.filter(a => a.id !== 'featured');
+            if (filter !== 'all') {
+                filtered = filtered.filter(a => a.category === filter);
+            }
+            if (searchTerm) {
+                const term = searchTerm.toLowerCase();
+                filtered = filtered.filter(a => 
+                    a.title.toLowerCase().includes(term) || 
+                    a.excerpt.toLowerCase().includes(term) ||
+                    a.categoryLabel.toLowerCase().includes(term)
+                );
+            }
+            articleGrid.innerHTML = filtered.map(a => `
+                <article class="article-card">
+                    <span class="category-tag">${a.categoryLabel}</span>
+                    <h3><a href="#" data-article="${a.id}">${a.title}</a></h3>
+                    <div class="meta">
+                        <span>📅 ${a.date}</span>
+                        <span>⏱ ${a.readingTime}</span>
+                    </div>
+                    <p class="excerpt">${a.excerpt}</p>
+                    <a href="#" class="read-more" data-article="${a.id}">Read more →</a>
+                </article>
+            `).join('');
+        }
+
+        // --- POPULAR LIST ---
+        const popularList = document.getElementById('popularList');
+        const popularArticles = articles.filter(a => a.id !== 'featured').slice(0, 5);
+        popularList.innerHTML = popularArticles.map(a => `
+            <li>
+                <a href="#" data-article="${a.id}">${a.title}</a>
+                <span class="small-meta">${a.readingTime} · ${a.categoryLabel}</span>
+            </li>
+        `).join('');
+
+        // --- ARTICLE MODAL ---
+        const articleView = document.getElementById('articleView');
+        const articleContent = document.getElementById('articleContent');
+        const closeArticle = document.getElementById('closeArticle');
+
+        function openArticle(id) {
+            const article = articles.find(a => a.id === id);
+            if (!article) return;
+            articleContent.innerHTML = article.content;
+            articleView.classList.add('active');
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeArticleView() {
+            articleView.classList.remove('active');
+            document.body.style.overflow = '';
+        }
+
+        // Event delegation for article links
+        document.addEventListener('click', (e) => {
+            const link = e.target.closest('[data-article]');
+            if (link) {
+                e.preventDefault();
+                const id = link.getAttribute('data-article');
+                openArticle(id);
+            }
+        });
+
+        closeArticle.addEventListener('click', closeArticleView);
+        articleView.addEventListener('click', (e) => {
+            if (e.target === articleView) closeArticleView();
+        });
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape' && articleView.classList.contains('active')) {
+                closeArticleView();
+            }
+        });
+
+        // --- FILTERING & SEARCH ---
+        const navLinks = document.querySelectorAll('.nav-links a[data-filter]');
+        const searchInput = document.getElementById('searchInput');
+        const searchBtn = document.getElementById('searchBtn');
+
+        let currentFilter = 'all';
+
+        function applyFilterAndSearch() {
+            renderArticles(currentFilter, searchInput.value.trim());
+        }
+
+        navLinks.forEach(link => {
+            link.addEventListener('click', (e) => {
+                e.preventDefault();
+                navLinks.forEach(l => l.classList.remove('active'));
+                link.classList.add('active');
+                currentFilter = link.getAttribute('data-filter');
+                applyFilterAndSearch();
+            });
+        });
+
+        searchBtn.addEventListener('click', applyFilterAndSearch);
+        searchInput.addEventListener('keyup', (e) => {
+            if (e.key === 'Enter') applyFilterAndSearch();
+        });
+        searchInput.addEventListener('input', applyFilterAndSearch);
+
+        // --- FAQ TOGGLE ---
+        document.querySelectorAll('.faq-question').forEach(q => {
+            q.addEventListener('click', () => {
+                const item = q.parentElement;
+                item.classList.toggle('open');
+            });
+            q.addEventListener('keydown', (e) => {
+                if (e.key === 'Enter' || e.key === ' ') {
+                    e.preventDefault();
+                    q.parentElement.classList.toggle('open');
+                }
+            });
+        });
+
+        // --- NEWSLETTER (prevent default) ---
+        document.getElementById('sidebarNewsletter')?.addEventListener('submit', (e) => {
+            e.preventDefault();
+            alert('Thank you for subscribing to Sunday Simmer!');
+            e.target.reset();
+        });
+
+        // --- FOOTER PAGE LINKS (dummy) ---
+        document.querySelectorAll('[data-page]').forEach(link => {
+            link.addEventListener('click', (e) => {
+                e.preventDefault();
+                const page = link.getAttribute('data-page');
+                alert(`This is a demo. The "${page}" page would contain the full ${page} content.`);
+            });
+        });
+
+        // --- INITIAL RENDER ---
+        renderArticles();
+    </script>
+</body>
+</html>

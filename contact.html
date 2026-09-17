@@ -1,0 +1,772 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact — Feather Spoon Pantry</title>
+    <meta name="description" content="Get in touch with Feather Spoon Pantry. Questions, collaborations, or just to say hello — we'd love to hear from you.">
+    <link rel="canonical" href="https://featherspoonpantry.com/contact.html">
+    <!-- Open Graph -->
+    <meta property="og:title" content="Contact — Feather Spoon Pantry">
+    <meta property="og:description" content="Questions, collaborations, or just to say hello — we'd love to hear from you.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://featherspoonpantry.com/contact.html">
+    <!-- Schema.org -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "ContactPage",
+      "name": "Contact Feather Spoon Pantry",
+      "url": "https://featherspoonpantry.com/contact.html",
+      "description": "Contact page for Feather Spoon Pantry food blog."
+    }
+    </script>
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300..600&family=Source+Serif+4:opsz,wght@8..60,400..700&display=swap" rel="stylesheet">
+    <style>
+        /* --- RESET & BASE --- */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            font-size: 100%;
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Inter', system-ui, -apple-system, sans-serif;
+            background-color: #fbf8f4;
+            color: #2d2a24;
+            line-height: 1.6;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        a {
+            color: #5f4b3a;
+            text-decoration: none;
+            transition: color 0.15s ease;
+        }
+
+        a:hover {
+            color: #b35e3a;
+        }
+
+        /* --- TYPOGRAPHY --- */
+        h1, h2, h3, h4 {
+            font-family: 'Source Serif 4', Georgia, serif;
+            font-weight: 600;
+            line-height: 1.25;
+            color: #1e1b17;
+            letter-spacing: -0.01em;
+        }
+
+        h1 {
+            font-size: 2.4rem;
+            font-weight: 700;
+            margin-bottom: 0.5rem;
+        }
+
+        h2 {
+            font-size: 1.75rem;
+            margin-bottom: 1rem;
+        }
+
+        h3 {
+            font-size: 1.3rem;
+            margin-bottom: 0.6rem;
+        }
+
+        p {
+            margin-bottom: 1.2rem;
+        }
+
+        /* --- LAYOUT --- */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 1.5rem;
+        }
+
+        /* --- HEADER (exact same as index) --- */
+        .site-header {
+            background-color: #fbf8f4;
+            border-bottom: 1px solid #e4ddd3;
+            padding: 1.2rem 0;
+        }
+
+        .header-inner {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 1rem;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .logo-icon {
+            width: 32px;
+            height: 32px;
+            background: #5f4b3a;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #fbf8f4;
+            font-size: 1.2rem;
+            font-weight: 600;
+            font-family: 'Source Serif 4', serif;
+        }
+
+        .logo-text {
+            font-family: 'Source Serif 4', serif;
+            font-weight: 700;
+            font-size: 1.5rem;
+            color: #1e1b17;
+            letter-spacing: -0.02em;
+        }
+
+        .logo-text span {
+            color: #b35e3a;
+            font-weight: 400;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 1.8rem;
+            list-style: none;
+            font-size: 0.95rem;
+            font-weight: 500;
+            color: #5a4e42;
+            flex-wrap: wrap;
+        }
+
+        .nav-links a {
+            color: #4f453b;
+            padding-bottom: 2px;
+            border-bottom: 2px solid transparent;
+        }
+
+        .nav-links a:hover {
+            border-bottom-color: #b35e3a;
+            color: #1e1b17;
+        }
+
+        .nav-links a.active {
+            border-bottom-color: #b35e3a;
+            color: #1e1b17;
+            font-weight: 600;
+        }
+
+        .search-bar {
+            display: flex;
+            align-items: center;
+            background: #fff;
+            border: 1px solid #e4ddd3;
+            border-radius: 40px;
+            padding: 0.3rem 0.3rem 0.3rem 1rem;
+            max-width: 220px;
+            transition: border-color 0.2s;
+        }
+
+        .search-bar:focus-within {
+            border-color: #b35e3a;
+        }
+
+        .search-bar input {
+            border: none;
+            background: transparent;
+            padding: 0.4rem 0;
+            font-size: 0.9rem;
+            font-family: 'Inter', sans-serif;
+            color: #2d2a24;
+            outline: none;
+            width: 100%;
+        }
+
+        .search-bar input::placeholder {
+            color: #9b8e80;
+        }
+
+        .search-bar button {
+            background: none;
+            border: none;
+            cursor: pointer;
+            padding: 0.3rem 0.6rem;
+            color: #7a6b5d;
+            font-size: 1rem;
+            transition: color 0.15s;
+        }
+
+        .search-bar button:hover {
+            color: #b35e3a;
+        }
+
+        .menu-toggle {
+            display: none;
+            background: none;
+            border: none;
+            font-size: 1.8rem;
+            color: #4f453b;
+            cursor: pointer;
+            padding: 0.2rem 0.5rem;
+        }
+
+        /* --- CONTACT PAGE SPECIFIC --- */
+        .contact-header {
+            text-align: center;
+            padding: 2.5rem 0 1rem;
+        }
+
+        .contact-header h1 {
+            font-size: 2.6rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .contact-header p {
+            font-size: 1.15rem;
+            color: #5a4e42;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .contact-grid {
+            display: grid;
+            grid-template-columns: 1fr 1.2fr;
+            gap: 3rem;
+            margin: 2rem 0 4rem;
+        }
+
+        /* --- CONTACT INFO CARD --- */
+        .contact-info {
+            background: #fff;
+            border: 1px solid #ede7df;
+            border-radius: 8px;
+            padding: 2rem 1.8rem;
+            display: flex;
+            flex-direction: column;
+            gap: 1.8rem;
+        }
+
+        .contact-info h2 {
+            font-size: 1.5rem;
+            margin-bottom: 0.2rem;
+        }
+
+        .info-item {
+            display: flex;
+            gap: 1rem;
+            align-items: flex-start;
+        }
+
+        .info-icon {
+            width: 40px;
+            height: 40px;
+            background: #f5efe8;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.2rem;
+            flex-shrink: 0;
+            color: #b35e3a;
+        }
+
+        .info-item h4 {
+            font-family: 'Inter', sans-serif;
+            font-size: 0.85rem;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            color: #7a6b5d;
+            font-weight: 600;
+            margin-bottom: 0.1rem;
+        }
+
+        .info-item p {
+            margin-bottom: 0.2rem;
+            font-size: 0.98rem;
+            color: #2d2a24;
+        }
+
+        .info-item a {
+            color: #b35e3a;
+            font-weight: 500;
+        }
+
+        .info-item a:hover {
+            text-decoration: underline;
+        }
+
+        .social-links {
+            display: flex;
+            gap: 0.8rem;
+            margin-top: 0.5rem;
+        }
+
+        .social-links a {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 38px;
+            height: 38px;
+            background: #f5efe8;
+            border-radius: 50%;
+            color: #5f4b3a;
+            font-size: 1.1rem;
+            transition: background 0.2s, color 0.2s;
+        }
+
+        .social-links a:hover {
+            background: #b35e3a;
+            color: #fff;
+        }
+
+        /* --- CONTACT FORM --- */
+        .contact-form-wrapper {
+            background: #fff;
+            border: 1px solid #ede7df;
+            border-radius: 8px;
+            padding: 2rem 2rem 2.2rem;
+        }
+
+        .contact-form-wrapper h2 {
+            font-size: 1.5rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .form-group {
+            margin-bottom: 1.2rem;
+        }
+
+        .form-group label {
+            display: block;
+            font-weight: 500;
+            font-size: 0.9rem;
+            margin-bottom: 0.3rem;
+            color: #3a332c;
+        }
+
+        .form-group input,
+        .form-group textarea,
+        .form-group select {
+            width: 100%;
+            padding: 0.75rem 1rem;
+            border: 1px solid #d9cfc2;
+            border-radius: 6px;
+            font-family: 'Inter', sans-serif;
+            font-size: 0.95rem;
+            background: #fbf8f4;
+            color: #2d2a24;
+            outline: none;
+            transition: border-color 0.2s, background 0.2s;
+        }
+
+        .form-group input:focus,
+        .form-group textarea:focus,
+        .form-group select:focus {
+            border-color: #b35e3a;
+            background: #fff;
+        }
+
+        .form-group textarea {
+            resize: vertical;
+            min-height: 140px;
+        }
+
+        .form-row {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1.2rem;
+        }
+
+        .submit-btn {
+            background: #5f4b3a;
+            color: #fff;
+            border: none;
+            padding: 0.85rem 2.5rem;
+            border-radius: 6px;
+            font-weight: 600;
+            font-size: 1rem;
+            cursor: pointer;
+            transition: background 0.15s;
+            font-family: 'Inter', sans-serif;
+            margin-top: 0.5rem;
+            width: 100%;
+        }
+
+        .submit-btn:hover {
+            background: #b35e3a;
+        }
+
+        .form-note {
+            font-size: 0.8rem;
+            color: #8a7b6d;
+            margin-top: 0.8rem;
+            text-align: center;
+        }
+
+        /* --- FOOTER (exact same as index) --- */
+        .site-footer {
+            background: #2d2a24;
+            color: #d9cfc2;
+            padding: 3rem 0 2rem;
+            margin-top: 3rem;
+            border-top: 4px solid #b35e3a;
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr 1fr;
+            gap: 2.5rem;
+        }
+
+        .footer-brand p {
+            font-size: 0.9rem;
+            color: #b8ab9d;
+            margin-top: 0.8rem;
+            max-width: 300px;
+            line-height: 1.6;
+        }
+
+        .footer-brand .logo-text {
+            color: #fbf8f4;
+        }
+
+        .footer-brand .logo-text span {
+            color: #d98b6b;
+        }
+
+        .footer-col h4 {
+            font-family: 'Inter', sans-serif;
+            font-size: 0.85rem;
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
+            color: #fbf8f4;
+            margin-bottom: 1rem;
+            font-weight: 600;
+        }
+
+        .footer-col ul {
+            list-style: none;
+            display: flex;
+            flex-direction: column;
+            gap: 0.5rem;
+        }
+
+        .footer-col ul a {
+            color: #b8ab9d;
+            font-size: 0.9rem;
+        }
+
+        .footer-col ul a:hover {
+            color: #fbf8f4;
+        }
+
+        .footer-bottom {
+            border-top: 1px solid #4a423a;
+            margin-top: 2.5rem;
+            padding-top: 1.5rem;
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 1rem;
+            font-size: 0.85rem;
+            color: #9b8e80;
+        }
+
+        /* --- RESPONSIVE --- */
+        @media (max-width: 1024px) {
+            .contact-grid {
+                grid-template-columns: 1fr 1fr;
+                gap: 2rem;
+            }
+            .footer-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+        }
+
+        @media (max-width: 820px) {
+            .contact-grid {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+            .header-inner {
+                flex-wrap: wrap;
+            }
+            .nav-links {
+                order: 3;
+                width: 100%;
+                justify-content: flex-start;
+                gap: 1.2rem;
+                font-size: 0.9rem;
+                padding-top: 0.5rem;
+                border-top: 1px solid #ede7df;
+                margin-top: 0.5rem;
+            }
+            .search-bar {
+                max-width: 180px;
+            }
+            .contact-header h1 {
+                font-size: 2rem;
+            }
+        }
+
+        @media (max-width: 600px) {
+            .container {
+                padding: 0 1rem;
+            }
+            .header-inner {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+            .search-bar {
+                max-width: 100%;
+                width: 100%;
+            }
+            .nav-links {
+                flex-wrap: wrap;
+                gap: 0.8rem 1.2rem;
+            }
+            .contact-header h1 {
+                font-size: 1.7rem;
+            }
+            .contact-header p {
+                font-size: 1rem;
+            }
+            .contact-info {
+                padding: 1.5rem 1.2rem;
+            }
+            .contact-form-wrapper {
+                padding: 1.5rem 1.2rem;
+            }
+            .form-row {
+                grid-template-columns: 1fr;
+                gap: 0;
+            }
+            .footer-grid {
+                grid-template-columns: 1fr;
+                gap: 1.8rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- HEADER (same as index) -->
+    <header class="site-header">
+        <div class="container header-inner">
+            <div class="logo">
+                <div class="logo-icon">F</div>
+                <div class="logo-text">Feather<span>Spoon Pantry</span></div>
+            </div>
+            <nav>
+                <ul class="nav-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="contact.html" class="active">Contact</a></li>
+                    <li><a href="terms.html">Terms Of Privacy</a></li>
+                    <li><a href="privacy.html">Privacy Policy</a></li>
+					<li><a href="cookies.html">Cookies Policy</a></li> 
+                    <li><a href="disclaimer.html">Disclaimer</a></li>
+                    <li><a href="categories.html">Categories</a></li>
+                </ul>
+            </nav>
+            <div class="search-bar">
+                <input type="text" id="searchInput" placeholder="Search recipes..." aria-label="Search recipes">
+                <button id="searchBtn" aria-label="Search">🔍</button>
+            </div>
+            <button class="menu-toggle" aria-label="Menu">☰</button>
+        </div>
+    </header>
+
+    <!-- MAIN CONTENT -->
+    <main class="container">
+        <!-- CONTACT HEADER -->
+        <section class="contact-header">
+            <h1>Let's talk</h1>
+            <p>Whether you have a question about a recipe, a suggestion, or just want to say hello — I read every message and do my best to reply within a couple of days.</p>
+        </section>
+
+        <!-- CONTACT GRID -->
+        <div class="contact-grid">
+            <!-- INFO COLUMN -->
+            <div class="contact-info">
+                <h2>Contact details</h2>
+                
+                <div class="info-item">
+                    <div class="info-icon">✉️</div>
+                    <div>
+                        <h4>Email</h4>
+                        <p><a href="mailto:hello@featherspoonpantry.com">hello@featherspoonpantry.com</a></p>
+                        <p style="font-size:0.85rem; color:#7a6b5d; margin-bottom:0;">For general questions, recipe help, and hellos.</p>
+                    </div>
+                </div>
+
+                <div class="info-item">
+                    <div class="info-icon">🤝</div>
+                    <div>
+                        <h4>Collaborations</h4>
+                        <p><a href="mailto:partners@featherspoonpantry.com">partners@featherspoonpantry.com</a></p>
+                        <p style="font-size:0.85rem; color:#7a6b5d; margin-bottom:0;">Brand partnerships, sponsored content, and media inquiries.</p>
+                    </div>
+                </div>
+
+                <div class="info-item">
+                    <div class="info-icon">📍</div>
+                    <div>
+                        <h4>Based in</h4>
+                        <p>Portland, Oregon</p>
+                        <p style="font-size:0.85rem; color:#7a6b5d; margin-bottom:0;">Cooking, testing, and writing from my home kitchen.</p>
+                    </div>
+                </div>
+
+                <div>
+                    <h4 style="font-family:'Inter',sans-serif; font-size:0.85rem; text-transform:uppercase; letter-spacing:0.05em; color:#7a6b5d; font-weight:600; margin-bottom:0.6rem;">Follow along</h4>
+                    <div class="social-links">
+                        <a href="#" aria-label="Instagram">📷</a>
+                        <a href="#" aria-label="Pinterest">📌</a>
+                        <a href="#" aria-label="YouTube">▶️</a>
+                        <a href="#" aria-label="RSS">📡</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- FORM COLUMN -->
+            <div class="contact-form-wrapper">
+                <h2>Send a message</h2>
+                <form id="contactForm">
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="name">Your name</label>
+                            <input type="text" id="name" name="name" placeholder="e.g. Alex Rivera" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email address</label>
+                            <input type="email" id="email" name="email" placeholder="you@example.com" required>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="subject">Subject</label>
+                        <select id="subject" name="subject">
+                            <option value="general">General question</option>
+                            <option value="recipe">Recipe help</option>
+                            <option value="collab">Collaboration / partnership</option>
+                            <option value="feedback">Feedback or suggestion</option>
+                            <option value="other">Something else</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="message">Your message</label>
+                        <textarea id="message" name="message" placeholder="Tell me what's on your mind..." required></textarea>
+                    </div>
+
+                    <button type="submit" class="submit-btn">Send message</button>
+                    <p class="form-note">I typically reply within 2–3 business days.</p>
+                </form>
+            </div>
+        </div>
+    </main>
+
+    <!-- FOOTER (same as index) -->
+    <footer class="site-footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <div class="logo-text">Feather<span>Spoon</span></div>
+                    <p>Slow cooking, honest ingredients, and everyday recipes from an independent kitchen. Since 2018.</p>
+                </div>
+                <div class="footer-col">
+                    <h4>Explore</h4>
+                    <ul>
+                        <li><a href="#" data-filter="breakfast">Breakfast</a></li>
+                        <li><a href="#" data-filter="mains">Mains</a></li>
+                        <li><a href="#" data-filter="baking">Baking</a></li>
+                        <li><a href="#" data-filter="pantry">Pantry</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>About</h4>
+                    <ul>
+                        <li><a href="#" data-page="about">About Us</a></li>
+                        <li><a href="#" data-page="contact">Contact</a></li>
+                        <li><a href="#" data-page="privacy">Privacy Policy</a></li>
+                        <li><a href="#" data-page="terms">Terms of Use</a></li>
+                        <li><a href="#" data-page="cookies">Cookie Policy</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Follow</h4>
+                    <ul>
+                        <li><a href="#">Instagram</a></li>
+                        <li><a href="#">Pinterest</a></li>
+                        <li><a href="#">YouTube</a></li>
+                        <li><a href="#">RSS Feed</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <span>© 2025 Feather Spoon Pantry. All rights reserved.</span>
+                <span>Made with patience and good butter.</span>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // --- CONTACT FORM SUBMISSION (demo) ---
+        document.getElementById('contactForm')?.addEventListener('submit', (e) => {
+            e.preventDefault();
+            const name = document.getElementById('name').value.trim() || 'friend';
+            alert(`Thank you, ${name}! Your message has been sent (demo). I'll get back to you soon.`);
+            e.target.reset();
+        });
+
+        // --- FOOTER PAGE LINKS (demo, same as index) ---
+        document.querySelectorAll('[data-page]').forEach(link => {
+            link.addEventListener('click', (e) => {
+                e.preventDefault();
+                const page = link.getAttribute('data-page');
+                alert(`This is a demo. The "${page}" page would contain the full ${page} content.`);
+            });
+        });
+
+        // --- SEARCH BAR (demo, redirects to index with query) ---
+        const searchInput = document.getElementById('searchInput');
+        const searchBtn = document.getElementById('searchBtn');
+
+        function performSearch() {
+            const term = searchInput.value.trim();
+            if (term) {
+                // In a real site, you'd redirect to search results.
+                // For this demo, we alert and keep the user here.
+                alert(`Searching for "${term}" — in the full site, this would show matching recipes.`);
+            }
+        }
+
+        searchBtn?.addEventListener('click', performSearch);
+        searchInput?.addEventListener('keyup', (e) => {
+            if (e.key === 'Enter') performSearch();
+        });
+
+        // --- ACTIVE NAV LINK (already set via class, but ensure it's correct) ---
+        // The nav links are static HTML, so "Contact" has class="active" already.
+    </script>
+</body>
+</html>
